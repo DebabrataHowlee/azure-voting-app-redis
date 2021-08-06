@@ -19,7 +19,7 @@ variables:
   imagePullSecret: 'reg123123178160125-auth'
 
   # Agent VM image name
-  vmImageName: 'ubuntu-latest'
+  vmImageName: 'ubuntu-16.04'
 
 
 stages:
