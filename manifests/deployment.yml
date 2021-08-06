@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: debabratahowleeazurevotingappredis 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: debabratahowleeazurevotingappredis
+  template:
+    metadata:
+      labels:
+        app: debabratahowleeazurevotingappredis 
+    spec:
+      containers:
+        - name: debabratahowleeazurevotingappredis 
+          image: reg1231231.azurecr.io/debabratahowleeazurevotingappredis
+          ports:
+          - containerPort: 80
