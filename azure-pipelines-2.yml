@@ -36,7 +36,12 @@ stages:
         targetType: 'inline'
         script: |
           export KUBECONFIG=$(pwd)/.kubeconfig-d-aks
-          az aks get-credentials --resource-group ad-test --name d-aks --overwrite-existing --file $KUBECONFIG
+          az aks get-credentials --resource-group ad-test --name d-aks --overwrite-existing
+          ls
+          pwd
+          echo $(pwd)/.kubeconfig-d-aks
+          echo KUBECONFIG
+          echo $KUBECONFIG
           wget https://github.com/Azure/kubelogin/releases/download/v0.0.9/kubelogin-linux-amd64.zip
           unzip kubelogin-linux-amd64.zip
           sudo mv bin/linux_amd64/kubelogin /usr/local/bin
